@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20140405201708) do
 
   create_table "events", force: true do |t|
     t.string   "title"
-    t.string   "arist"
+    t.string   "artist"
     t.string   "artist_second"
     t.string   "artist_third"
     t.string   "artist_fourth"

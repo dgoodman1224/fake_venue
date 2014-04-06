@@ -3,7 +3,7 @@ class CreateEvents < ActiveRecord::Migration
     create_table :events do |t|
 
     	t.string :title
-    	t.string :arist
+    	t.string :artist
     	t.string :artist_second
     	t.string :artist_third
     	t.string :artist_fourth

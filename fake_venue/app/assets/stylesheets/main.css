@@ -5,8 +5,12 @@
 	height: 3em;
 	width: 100%;
 	position: fixed;
+	z-index: 0;
 }
 
 #home	{
 	text-align: right;
+	z-index: 100;
+	right: 0;
+	color: orange;
 }
