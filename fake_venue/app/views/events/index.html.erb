@@ -1,4 +1,4 @@
-<h1>Listing events</h1>
+<h1>Upcoming Shows</h1>
 
 <table>
   <thead>
@@ -11,11 +11,27 @@
 
   <tbody>
     <% @events.each do |event| %>
-      <tr>
+    <div class = "event">
+      <div class = "title" >
+        <h2> Event Title: <%= event.title %> </h2>
+      </div>
+      <div class = "main_act">
+        <h2> <%= event.artist %> </h2>
+    </div>
+      <% if event.artist_second %>
+        <%= event.artist_second + (" , " + event.artist_third) if event.artist_third + (" , " + event.artist_fourth) if event.artist_fourth  %> 
+      <% end %>
+      <h3> Date:   <%= event.date %>
+           Price: $<%= event.price %>
+      </h3>
+           
+
+      <div class = "options">
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Do you want to delete this event?' } %></td>
+      </div>
+    </div>
     <% end %>
   </tbody>
 </table>
