@@ -14,3 +14,45 @@
 	right: 0;
 	color: orange;
 }
+
+h1 {
+	text-align: center;
+	font-size: 6em;
+	color: orange;
+}
+
+#random_band {
+	color: blue;
+	text-align: right;
+	margin-right: 2em;
+	float: right
+}
+
+#random_band button {
+	margin-right: 15em;
+}
+
+#random_band h3 {
+	margin-right: 15em;
+	color: gray;
+}
+#venue_image {
+	margin-top: 6em;
+	text-align: center;
+}
+
+.event {
+	padding-bottom: 1em;
+	padding-top: 1em;
+	border: black thin solid;
+}
+
+.event .title {
+	font-size: 1.5em;
+	color: yellow ;
+}
+
+.event .main_act {
+	font-size: 1em;
+	color: green;
+}
