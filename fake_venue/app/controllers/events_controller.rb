@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all.order(:date)
   end
 
   # GET /events/1
@@ -15,6 +15,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    @errors = @errors
   end
 
   # GET /events/1/edit
@@ -25,8 +26,12 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-    @event.save
-    redirect_to "/events"
+    if @event.save
+      redirect_to "/events"
+     else
+      @errors = @event.errors
+      render 'new'
+    end
   end
 
   # PATCH/PUT /events/1
