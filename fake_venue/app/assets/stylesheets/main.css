@@ -56,3 +56,7 @@ h1 {
 	font-size: 1em;
 	color: green;
 }
+
+.event .options a {
+	margin-right: 2em;
+}
