@@ -1,9 +1,11 @@
+ <div class = "errors">
   <% if @errors %>
     <p> Please fix the following mistakes so we can process your request. </p>
     <% @errors.each do |error| %>
-      <%= error %>
+      <%= Event.messages(error) %>
     <% end %>
   <% end %>
+  </div>
 
 
 
@@ -24,7 +26,7 @@
   <%= f.text_field :artist_fourth %><br />
 
    <%= f.label :date %>:
-  <%= f.date_select :date %><br />
+  <%= f.text_field :date %> Please input as mm/dd/yyyy<br />
 
    <%= f.label :price %>:
   <%= f.text_field :price %>

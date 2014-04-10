@@ -45,6 +45,7 @@ h1 {
 	padding-bottom: 1em;
 	padding-top: 1em;
 	border: black thin solid;
+	text-align: center;
 }
 
 .event .title {
