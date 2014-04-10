@@ -1,4 +1,19 @@
 <p id="notice"><%= notice %></p>
+<div class = "event">
+      <div class = "title" >
+  			
+        <h2> Event Title: <%= @event.title %> </h2>
+      </div>
+      <div class = "main_act">
+        <h2>Headliner: <%= @event.artist %> </h2>
+    </div>
+      <% if @event.artist_second %>
+        Openers: <%= @event.artist_second + (" , " + @event.artist_third) if @event.artist_third + (" , " + @event.artist_fourth) if @event.artist_fourth  %> 
+      <% end %>
+      <h3> Date:   <%= @event.date %>
+           Price: $<%= @event.price %>
+      </h3>
+    </div>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

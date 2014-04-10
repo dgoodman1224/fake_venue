@@ -25,11 +25,15 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
+    puts "Params look like           "
+    puts params
+    puts "Params look like           "
     @event = Event.new(event_params)
     if @event.save
       redirect_to "/events"
      else
       @errors = @event.errors
+
       render 'new'
     end
   end
