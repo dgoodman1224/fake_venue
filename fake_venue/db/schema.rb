@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140405201708) do
     t.string   "artist_second"
     t.string   "artist_third"
     t.string   "artist_fourth"
-    t.string   "date"
+    t.date     "date"
     t.integer  "price"
     t.string   "event_time"
     t.datetime "created_at"
