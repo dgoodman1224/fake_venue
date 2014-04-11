@@ -7,7 +7,7 @@ class CreateEvents < ActiveRecord::Migration
     	t.string :artist_second
     	t.string :artist_third
     	t.string :artist_fourth
-    	t.string :date
+    	t.date :date
     	t.integer :price
     	t.string :event_time
 
