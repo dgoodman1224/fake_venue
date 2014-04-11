@@ -2,8 +2,7 @@
   <% if @errors %>
     <p> Please fix the following mistakes so we can process your request. </p>
     <% @errors.each do |error| %>
-      <%= Event.messages(error) %>
-      <%= puts error %>
+      <p> <%= Event.messages(error[0]) %> </p>
     <% end %>
   <% end %>
   </div>
