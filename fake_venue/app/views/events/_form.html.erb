@@ -1,6 +1,6 @@
  <div class = "errors">
   <% if @errors %>
-    <p> Please fix the following mistakes so we can process your request. </p>
+    <h3> Please fix the following mistakes so we can process your request. </h3>
     <% @errors.each do |error| %>
       <p> <%= Event.messages(error[0]) %> </p>
     <% end %>
@@ -37,10 +37,10 @@
 
    <%= f.label :price %>:
   <%= f.text_field :price %>
-</div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>
 
