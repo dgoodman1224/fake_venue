@@ -4,7 +4,7 @@ $( document ).ready(function() {
 		addAct = function() {
 			$(acts[i]).show()
 			i+=1
-			if (i > 2) {
+			if (i > 2	) {
 				$('#supporting').hide()
 			}
 		}

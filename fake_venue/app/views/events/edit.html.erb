@@ -1,4 +1,10 @@
 <h1>Editing event</h1>
+<% puts @erros %>
+<% if @event.errors %>
+	<% @event.errors.each do |error| %>
+		The <%= error %> is not valid
+	<% end %>
+<% end %>
 
 <%= render 'form' %>
 

@@ -18,8 +18,10 @@
       <div class = "main_act">
         <h2>Headliner: <%= event.artist %> </h2>
     </div>
-      <% if event.artist_second %>
-        Openers: <%= event.artist_second + (" , " + event.artist_third) if event.artist_third + (" , " + event.artist_fourth) if event.artist_fourth  %> 
+      <% if event.artist_second != "" %>
+        Openers: <%= event.artist_second %> 
+        <%= " , " + event.artist_third if event.artist_third != "" %>
+        <%= " , " + event.artist_fourth if event.artist_fourth != ""  %> 
       <% end %>
       <h3> Date:   <%= event.date %>
            Price: $<%= event.price %>
