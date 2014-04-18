@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
 	validates :title, :date, uniqueness: true
 	validates :price, :artist, :date, :presence => true
-	validate :valid_date, :make_number
+	validate :valid_date, :make_number, :unique_artists
 
 	def valid_date
 		if self.date > Date.today
@@ -27,5 +27,15 @@ class Event < ActiveRecord::Base
 		self.errors.add :price, "Please enter a valid price"
 		return false
 	end
+	end
+
+	def unique_artists
+		artists = []
+		artists << self.artist
+		artists << self.artist_second
+		artists << artist_third
+		artists << artist_fourth
+		artists.delete("")
+		artists.count == artists.uniq.count
 	end
 end

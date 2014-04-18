@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140405201708) do
     t.date     "date"
     t.integer  "price"
     t.string   "event_time"
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

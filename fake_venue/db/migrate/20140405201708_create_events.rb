@@ -10,6 +10,7 @@ class CreateEvents < ActiveRecord::Migration
     	t.date :date
     	t.integer :price
     	t.string :event_time
+      t.string :url
 
 
       t.timestamps
