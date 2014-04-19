@@ -33,8 +33,8 @@ class Event < ActiveRecord::Base
 		artists = []
 		artists << self.artist
 		artists << self.artist_second
-		artists << artist_third
-		artists << artist_fourth
+		artists << self.artist_third
+		artists << self.artist_fourth
 		artists.delete("")
 		artists.count == artists.uniq.count
 	end
