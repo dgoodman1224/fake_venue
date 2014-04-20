@@ -34,6 +34,9 @@ class Event < ActiveRecord::Base
 		bands.delete("")
 		puts "------------------------------------------------------------------------"
 		puts "getting here at least homie"
+		p bands
+		p bands.count
+		p bands.uniq.count
 		puts "------------------------------------------------------------------------"
 		if bands.count == bands.uniq.count
 			true
