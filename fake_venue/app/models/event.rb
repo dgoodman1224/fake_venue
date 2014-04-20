@@ -19,25 +19,19 @@ class Event < ActiveRecord::Base
 
 	def make_number
 		price = self.price
-	return true if price > 0
-	if price[0] == "$"
-		self.price = price.slice(1..-1).to_i
-		return true
-	else
-		self.errors.add :price, "Please enter a valid price"
-		return false
-	end
+		return true if price > 0
+		if price[0] == "$"
+			self.price = price.slice(1..-1).to_i
+			return true
+		else
+			self.errors.add :price, "Please enter a valid price"
+			return false
+		end
 	end
 
 	def unique_artists
 		bands = [self.artist, self.artist_second, self.artist_third, self.artist_fourth]
 		bands.delete("")
-		puts "------------------------------------------------------------------------"
-		puts "getting here at least homie"
-		p bands
-		p bands.count
-		p bands.uniq.count
-		puts "------------------------------------------------------------------------"
 		if bands.count == bands.uniq.count
 			true
 		else
