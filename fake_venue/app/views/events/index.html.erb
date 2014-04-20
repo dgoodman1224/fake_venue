@@ -24,7 +24,7 @@
         <%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Do you want to delete this event?' } %>
       </div>
       <p> This event is <%= (event.date - Date.today).to_i %> days away</p>
-      <% if event.url %>
+      <% if event.url != "" %>
        <img class = "event_image" src= <%= "#{event.url}" %> >
       <% end %>
     </div>

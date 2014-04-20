@@ -12,10 +12,10 @@
 <div class = "form" >
   <%= form_for @event do |f| %>
   <%= f.label :title %>:
-  <%= f.text_field :title %><br />
+  <%= f.text_field :title %> <br>
 
   <%= f.label :artist %>:
-  <%= f.text_field :artist %>  <button type = button id = "supporting"> Add opening act</button> <br />
+  <%= f.text_field :artist %>  <p id = "supporting">Add More Bands</p><br>
 
   <div id = "artist_second" visibility: hidden>
     <%= f.label :artist_second %>:
@@ -38,7 +38,7 @@
    <%= f.label :price %>:
   <%= f.text_field :price %> <br/>
 
-  <%= f.label :url %>:
+  Image <%= f.label :url %>:
   <%= f.text_field :url %>
 
   <div class="actions">
