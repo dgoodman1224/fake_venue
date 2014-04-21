@@ -23,7 +23,8 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to "/events"
      else
-      @errors = @event.errors.messages
+      @errors = @event.errors
+      p @errors
       render 'new'
     end
   end
