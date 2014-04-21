@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
 	validates_uniqueness_of :title, :date, message: "This must be unique from other events"
-	validates :price, :artist, :presence => true
+	validates_presence_of :price, :artist, message: "This field cannot be left blank"
 	validate :valid_date, :make_number, :unique_artists
 
 	def valid_date
@@ -17,6 +17,7 @@ class Event < ActiveRecord::Base
 
 	def make_number
 		price = self.price
+		return false if !price
 		return true if price > 0
 		if price[0] == "$"
 			self.price = price.slice(1..-1).to_i
