@@ -11,13 +11,15 @@
 
 .nav p {
 	margin-left: 1em;
+	display: inline-block;
 }
 
 .nav #home {
-	margin-left: 60em;
 	color: white;
-	display: inline-block;
-	position: relative top 5em;
+	float: right;
+	margin: 1em 2em 0em 0em;
+	text-decoration: none;
+
 }
 
 .nav  hover {
@@ -92,24 +94,11 @@ h1 {
 }
 
 #supporting {
-  border: 1px solid #aaa;
-  color: #444;
+  color: blue;
   font-size: inherit;
   margin-bottom: 0px;
   min-width: 4em;
-  padding: 3px 12px 3px 12px;
   font-family: sans-serif;
-  width: 8%;
+  width: 10%;
   display: inline-block;
-}
-
-#supporting hover {
-  border-color: blue;
-  color: blue;
-}
-
-#supporting active {
-  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
-  background: #ebebeb -webkit-linear-gradient(#f4f4f4, #efefef 40%, #dcdcdc);
-  color: #333;
 }
